@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93032F7E13EF21E900C02357 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93032F7D13EF21E900C02357 /* UIKit.framework */; };
+		93032F8013EF21E900C02357 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93032F7F13EF21E900C02357 /* Foundation.framework */; };
+		93032F8213EF21E900C02357 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93032F8113EF21E900C02357 /* CoreGraphics.framework */; };
+		93032F8813EF21E900C02357 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93032F8613EF21E900C02357 /* InfoPlist.strings */; };
+		93032F8A13EF21E900C02357 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93032F8913EF21E900C02357 /* main.m */; };
+		93032F8E13EF21E900C02357 /* OrcaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93032F8D13EF21E900C02357 /* OrcaAppDelegate.m */; };
+		93032F9113EF21E900C02357 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93032F8F13EF21E900C02357 /* MainWindow.xib */; };
+		93032F9413EF21E900C02357 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93032F9313EF21E900C02357 /* RootViewController.m */; };
+		93032F9713EF21E900C02357 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93032F9513EF21E900C02357 /* RootViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		93032F7913EF21E900C02357 /* Orca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orca.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93032F7D13EF21E900C02357 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		93032F7F13EF21E900C02357 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		93032F8113EF21E900C02357 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		93032F8513EF21E900C02357 /* Orca-Info.plist */ = {isa = PBXFileReference; path = "Orca-Info.plist"; sourceTree = "<group>"; };
+		93032F8713EF21E900C02357 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		93032F8913EF21E900C02357 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		93032F8B13EF21E900C02357 /* Orca-Prefix.pch */ = {isa = PBXFileReference; path = "Orca-Prefix.pch"; sourceTree = "<group>"; };
+		93032F8C13EF21E900C02357 /* OrcaAppDelegate.h */ = {isa = PBXFileReference; path = OrcaAppDelegate.h; sourceTree = "<group>"; };
+		93032F8D13EF21E900C02357 /* OrcaAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrcaAppDelegate.m; sourceTree = "<group>"; };
+		93032F9013EF21E900C02357 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		93032F9213EF21E900C02357 /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		93032F9313EF21E900C02357 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		93032F9613EF21E900C02357 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93032F7613EF21E900C02357 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93032F7E13EF21E900C02357 /* UIKit.framework in Frameworks */,
+				93032F8013EF21E900C02357 /* Foundation.framework in Frameworks */,
+				93032F8213EF21E900C02357 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93032F6E13EF21E900C02357 = {
+			isa = PBXGroup;
+			children = (
+				93032F8313EF21E900C02357 /* Orca */,
+				93032F7C13EF21E900C02357 /* Frameworks */,
+				93032F7A13EF21E900C02357 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93032F7A13EF21E900C02357 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93032F7913EF21E900C02357 /* Orca.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93032F7C13EF21E900C02357 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93032F7D13EF21E900C02357 /* UIKit.framework */,
+				93032F7F13EF21E900C02357 /* Foundation.framework */,
+				93032F8113EF21E900C02357 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93032F8313EF21E900C02357 /* Orca */ = {
+			isa = PBXGroup;
+			children = (
+				93032F8C13EF21E900C02357 /* OrcaAppDelegate.h */,
+				93032F8D13EF21E900C02357 /* OrcaAppDelegate.m */,
+				93032F8F13EF21E900C02357 /* MainWindow.xib */,
+				93032F9213EF21E900C02357 /* RootViewController.h */,
+				93032F9313EF21E900C02357 /* RootViewController.m */,
+				93032F9513EF21E900C02357 /* RootViewController.xib */,
+				93032F8413EF21E900C02357 /* Supporting Files */,
+			);
+			path = Orca;
+			sourceTree = "<group>";
+		};
+		93032F8413EF21E900C02357 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				93032F8513EF21E900C02357 /* Orca-Info.plist */,
+				93032F8613EF21E900C02357 /* InfoPlist.strings */,
+				93032F8913EF21E900C02357 /* main.m */,
+				93032F8B13EF21E900C02357 /* Orca-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93032F7813EF21E900C02357 /* Orca */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93032F9A13EF21E900C02357 /* Build configuration list for PBXNativeTarget "Orca" */;
+			buildPhases = (
+				93032F7513EF21E900C02357 /* Sources */,
+				93032F7613EF21E900C02357 /* Frameworks */,
+				93032F7713EF21E900C02357 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Orca;
+			productName = Orca;
+			productReference = 93032F7913EF21E900C02357 /* Orca.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93032F7013EF21E900C02357 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 93032F7313EF21E900C02357 /* Build configuration list for PBXProject "Orca" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 93032F6E13EF21E900C02357;
+			productRefGroup = 93032F7A13EF21E900C02357 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93032F7813EF21E900C02357 /* Orca */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93032F7713EF21E900C02357 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93032F8813EF21E900C02357 /* InfoPlist.strings in Resources */,
+				93032F9113EF21E900C02357 /* MainWindow.xib in Resources */,
+				93032F9713EF21E900C02357 /* RootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93032F7513EF21E900C02357 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93032F8A13EF21E900C02357 /* main.m in Sources */,
+				93032F8E13EF21E900C02357 /* OrcaAppDelegate.m in Sources */,
+				93032F9413EF21E900C02357 /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		93032F8613EF21E900C02357 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93032F8713EF21E900C02357 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		93032F8F13EF21E900C02357 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93032F9013EF21E900C02357 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		93032F9513EF21E900C02357 /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93032F9613EF21E900C02357 /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93032F9813EF21E900C02357 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		93032F9913EF21E900C02357 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93032F9B13EF21E900C02357 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Orca/Orca-Prefix.pch";
+				INFOPLIST_FILE = "Orca/Orca-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		93032F9C13EF21E900C02357 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Orca/Orca-Prefix.pch";
+				INFOPLIST_FILE = "Orca/Orca-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93032F7313EF21E900C02357 /* Build configuration list for PBXProject "Orca" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93032F9813EF21E900C02357 /* Debug */,
+				93032F9913EF21E900C02357 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93032F9A13EF21E900C02357 /* Build configuration list for PBXNativeTarget "Orca" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93032F9B13EF21E900C02357 /* Debug */,
+				93032F9C13EF21E900C02357 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93032F7013EF21E900C02357 /* Project object */;
+}
