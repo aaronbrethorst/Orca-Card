@@ -1,0 +1,9 @@
+[submodule "Orca/Libraries/AFNetworking"]
+	path = Orca/Libraries/AFNetworking
+	url = git://github.com/gowalla/AFNetworking.git
+[submodule "Orca/Libraries/JSONKit"]
+	path = Orca/Libraries/JSONKit
+	url = git://github.com/johnezang/JSONKit.git
+[submodule "Orca/Controls/SVProgressHUD"]
+	path = Orca/Controls/SVProgressHUD
+	url = git://github.com/samvermette/SVProgressHUD.git

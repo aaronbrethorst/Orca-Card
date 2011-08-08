@@ -7,13 +7,29 @@
 //
 
 #import "RootViewController.h"
-
+#import "LoginViewController.h"
 @implementation RootViewController
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+//    [[OrcaAPIClient sharedClient] getPath:@"ERG-Seattle/welcomePage.do?m=5" parameters:[NSDictionary dictionary] success:^(id response) {
+//        NSLog(@"yay: %@", response);
+//    } failure:^(NSError *error) {
+//        NSLog(@"boo: %@", error);
+//    }];
+    
+//    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+//    [dict setObject:@"aaronbrethorst" forKey:@"j_username"];
+//    [dict setObject:@"ABE143st" forKey:@"j_password"];
+//    
+//    [[OrcaAPIClient sharedClient] postPath:@"/ERG-Seattle/j_security_check" parameters:dict success:^(id response) {
+//        NSLog(@"%@", response);
+//    } failure:^(NSError *error) {
+//        NSLog(@"%@", error);
+//    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -24,6 +40,10 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    LoginViewController *login = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
+    UINavigationController *nav = [[[UINavigationController alloc] initWithRootViewController:login] autorelease];
+    [self presentModalViewController:nav animated:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -36,13 +56,10 @@
 	[super viewDidDisappear:animated];
 }
 
-/*
- // Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	// Return YES for supported orientations.
-	return (interfaceOrientation == UIInterfaceOrientationPortrait);
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+	return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
- */
 
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

@@ -16,6 +16,21 @@
 		93032F9113EF21E900C02357 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93032F8F13EF21E900C02357 /* MainWindow.xib */; };
 		93032F9413EF21E900C02357 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93032F9313EF21E900C02357 /* RootViewController.m */; };
 		93032F9713EF21E900C02357 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93032F9513EF21E900C02357 /* RootViewController.xib */; };
+		93032FAF13EF226A00C02357 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93032FA013EF226A00C02357 /* AFHTTPRequestOperation.m */; };
+		93032FB013EF226A00C02357 /* AFImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 93032FA213EF226A00C02357 /* AFImageCache.m */; };
+		93032FB113EF226A00C02357 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93032FA413EF226A00C02357 /* AFImageRequestOperation.m */; };
+		93032FB213EF226A00C02357 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93032FA613EF226A00C02357 /* AFJSONRequestOperation.m */; };
+		93032FB313EF226A00C02357 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93032FA813EF226A00C02357 /* AFNetworkActivityIndicatorManager.m */; };
+		93032FB413EF226A00C02357 /* AFRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 93032FAA13EF226A00C02357 /* AFRestClient.m */; };
+		93032FB513EF226A00C02357 /* UIImage+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 93032FAC13EF226A00C02357 /* UIImage+AFNetworking.m */; };
+		93032FB613EF226A00C02357 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 93032FAE13EF226A00C02357 /* UIImageView+AFNetworking.m */; };
+		93032FF813EF243D00C02357 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 93032FDF13EF243D00C02357 /* JSONKit.m */; };
+		93032FFF13EF24F000C02357 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93032FFC13EF24F000C02357 /* SVProgressHUD.bundle */; };
+		9303300013EF24F000C02357 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 93032FFE13EF24F000C02357 /* SVProgressHUD.m */; };
+		9303300213EF24FE00C02357 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9303300113EF24FE00C02357 /* QuartzCore.framework */; };
+		9303300513EF278100C02357 /* OrcaAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9303300413EF278100C02357 /* OrcaAPIClient.m */; };
+		9303300913EF407D00C02357 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9303300713EF407D00C02357 /* LoginViewController.m */; };
+		9303300A13EF407D00C02357 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9303300813EF407D00C02357 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +38,43 @@
 		93032F7D13EF21E900C02357 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		93032F7F13EF21E900C02357 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		93032F8113EF21E900C02357 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		93032F8513EF21E900C02357 /* Orca-Info.plist */ = {isa = PBXFileReference; path = "Orca-Info.plist"; sourceTree = "<group>"; };
+		93032F8513EF21E900C02357 /* Orca-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Orca-Info.plist"; sourceTree = "<group>"; };
 		93032F8713EF21E900C02357 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		93032F8913EF21E900C02357 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		93032F8B13EF21E900C02357 /* Orca-Prefix.pch */ = {isa = PBXFileReference; path = "Orca-Prefix.pch"; sourceTree = "<group>"; };
-		93032F8C13EF21E900C02357 /* OrcaAppDelegate.h */ = {isa = PBXFileReference; path = OrcaAppDelegate.h; sourceTree = "<group>"; };
+		93032F8B13EF21E900C02357 /* Orca-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Orca-Prefix.pch"; sourceTree = "<group>"; };
+		93032F8C13EF21E900C02357 /* OrcaAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrcaAppDelegate.h; sourceTree = "<group>"; };
 		93032F8D13EF21E900C02357 /* OrcaAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrcaAppDelegate.m; sourceTree = "<group>"; };
 		93032F9013EF21E900C02357 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		93032F9213EF21E900C02357 /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		93032F9213EF21E900C02357 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		93032F9313EF21E900C02357 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		93032F9613EF21E900C02357 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		93032F9F13EF226A00C02357 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		93032FA013EF226A00C02357 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		93032FA113EF226A00C02357 /* AFImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageCache.h; sourceTree = "<group>"; };
+		93032FA213EF226A00C02357 /* AFImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageCache.m; sourceTree = "<group>"; };
+		93032FA313EF226A00C02357 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		93032FA413EF226A00C02357 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		93032FA513EF226A00C02357 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		93032FA613EF226A00C02357 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		93032FA713EF226A00C02357 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		93032FA813EF226A00C02357 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		93032FA913EF226A00C02357 /* AFRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFRestClient.h; sourceTree = "<group>"; };
+		93032FAA13EF226A00C02357 /* AFRestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFRestClient.m; sourceTree = "<group>"; };
+		93032FAB13EF226A00C02357 /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AFNetworking.h"; sourceTree = "<group>"; };
+		93032FAC13EF226A00C02357 /* UIImage+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AFNetworking.m"; sourceTree = "<group>"; };
+		93032FAD13EF226A00C02357 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		93032FAE13EF226A00C02357 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		93032FDE13EF243D00C02357 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		93032FDF13EF243D00C02357 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		93032FFC13EF24F000C02357 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		93032FFD13EF24F000C02357 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		93032FFE13EF24F000C02357 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		9303300113EF24FE00C02357 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9303300313EF278100C02357 /* OrcaAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrcaAPIClient.h; sourceTree = "<group>"; };
+		9303300413EF278100C02357 /* OrcaAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrcaAPIClient.m; sourceTree = "<group>"; };
+		9303300613EF407D00C02357 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		9303300713EF407D00C02357 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		9303300813EF407D00C02357 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9303300213EF24FE00C02357 /* QuartzCore.framework in Frameworks */,
 				93032F7E13EF21E900C02357 /* UIKit.framework in Frameworks */,
 				93032F8013EF21E900C02357 /* Foundation.framework in Frameworks */,
 				93032F8213EF21E900C02357 /* CoreGraphics.framework in Frameworks */,
@@ -52,6 +95,8 @@
 		93032F6E13EF21E900C02357 = {
 			isa = PBXGroup;
 			children = (
+				93032FFA13EF24E500C02357 /* Controls */,
+				93032F9D13EF225A00C02357 /* Libraries */,
 				93032F8313EF21E900C02357 /* Orca */,
 				93032F7C13EF21E900C02357 /* Frameworks */,
 				93032F7A13EF21E900C02357 /* Products */,
@@ -69,6 +114,7 @@
 		93032F7C13EF21E900C02357 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9303300113EF24FE00C02357 /* QuartzCore.framework */,
 				93032F7D13EF21E900C02357 /* UIKit.framework */,
 				93032F7F13EF21E900C02357 /* Foundation.framework */,
 				93032F8113EF21E900C02357 /* CoreGraphics.framework */,
@@ -86,6 +132,11 @@
 				93032F9313EF21E900C02357 /* RootViewController.m */,
 				93032F9513EF21E900C02357 /* RootViewController.xib */,
 				93032F8413EF21E900C02357 /* Supporting Files */,
+				9303300313EF278100C02357 /* OrcaAPIClient.h */,
+				9303300413EF278100C02357 /* OrcaAPIClient.m */,
+				9303300613EF407D00C02357 /* LoginViewController.h */,
+				9303300713EF407D00C02357 /* LoginViewController.m */,
+				9303300813EF407D00C02357 /* LoginViewController.xib */,
 			);
 			path = Orca;
 			sourceTree = "<group>";
@@ -99,6 +150,68 @@
 				93032F8B13EF21E900C02357 /* Orca-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93032F9D13EF225A00C02357 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				93032FB713EF243D00C02357 /* JSONKit */,
+				93032F9E13EF226A00C02357 /* AFNetworking */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		93032F9E13EF226A00C02357 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				93032F9F13EF226A00C02357 /* AFHTTPRequestOperation.h */,
+				93032FA013EF226A00C02357 /* AFHTTPRequestOperation.m */,
+				93032FA113EF226A00C02357 /* AFImageCache.h */,
+				93032FA213EF226A00C02357 /* AFImageCache.m */,
+				93032FA313EF226A00C02357 /* AFImageRequestOperation.h */,
+				93032FA413EF226A00C02357 /* AFImageRequestOperation.m */,
+				93032FA513EF226A00C02357 /* AFJSONRequestOperation.h */,
+				93032FA613EF226A00C02357 /* AFJSONRequestOperation.m */,
+				93032FA713EF226A00C02357 /* AFNetworkActivityIndicatorManager.h */,
+				93032FA813EF226A00C02357 /* AFNetworkActivityIndicatorManager.m */,
+				93032FA913EF226A00C02357 /* AFRestClient.h */,
+				93032FAA13EF226A00C02357 /* AFRestClient.m */,
+				93032FAB13EF226A00C02357 /* UIImage+AFNetworking.h */,
+				93032FAC13EF226A00C02357 /* UIImage+AFNetworking.m */,
+				93032FAD13EF226A00C02357 /* UIImageView+AFNetworking.h */,
+				93032FAE13EF226A00C02357 /* UIImageView+AFNetworking.m */,
+			);
+			name = AFNetworking;
+			path = Orca/Libraries/AFNetworking/AFNetworking;
+			sourceTree = "<group>";
+		};
+		93032FB713EF243D00C02357 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				93032FDE13EF243D00C02357 /* JSONKit.h */,
+				93032FDF13EF243D00C02357 /* JSONKit.m */,
+			);
+			name = JSONKit;
+			path = Orca/Libraries/JSONKit;
+			sourceTree = "<group>";
+		};
+		93032FFA13EF24E500C02357 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				93032FFB13EF24F000C02357 /* SVProgressHUD */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		93032FFB13EF24F000C02357 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				93032FFC13EF24F000C02357 /* SVProgressHUD.bundle */,
+				93032FFD13EF24F000C02357 /* SVProgressHUD.h */,
+				93032FFE13EF24F000C02357 /* SVProgressHUD.m */,
+			);
+			name = SVProgressHUD;
+			path = Orca/Controls/SVProgressHUD/SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +264,8 @@
 				93032F8813EF21E900C02357 /* InfoPlist.strings in Resources */,
 				93032F9113EF21E900C02357 /* MainWindow.xib in Resources */,
 				93032F9713EF21E900C02357 /* RootViewController.xib in Resources */,
+				93032FFF13EF24F000C02357 /* SVProgressHUD.bundle in Resources */,
+				9303300A13EF407D00C02357 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +279,18 @@
 				93032F8A13EF21E900C02357 /* main.m in Sources */,
 				93032F8E13EF21E900C02357 /* OrcaAppDelegate.m in Sources */,
 				93032F9413EF21E900C02357 /* RootViewController.m in Sources */,
+				93032FAF13EF226A00C02357 /* AFHTTPRequestOperation.m in Sources */,
+				93032FB013EF226A00C02357 /* AFImageCache.m in Sources */,
+				93032FB113EF226A00C02357 /* AFImageRequestOperation.m in Sources */,
+				93032FB213EF226A00C02357 /* AFJSONRequestOperation.m in Sources */,
+				93032FB313EF226A00C02357 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				93032FB413EF226A00C02357 /* AFRestClient.m in Sources */,
+				93032FB513EF226A00C02357 /* UIImage+AFNetworking.m in Sources */,
+				93032FB613EF226A00C02357 /* UIImageView+AFNetworking.m in Sources */,
+				93032FF813EF243D00C02357 /* JSONKit.m in Sources */,
+				9303300013EF24F000C02357 /* SVProgressHUD.m in Sources */,
+				9303300513EF278100C02357 /* OrcaAPIClient.m in Sources */,
+				9303300913EF407D00C02357 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
