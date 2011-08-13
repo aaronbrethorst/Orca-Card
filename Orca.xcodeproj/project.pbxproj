@@ -31,6 +31,8 @@
 		9303300513EF278100C02357 /* OrcaAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9303300413EF278100C02357 /* OrcaAPIClient.m */; };
 		9303300913EF407D00C02357 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9303300713EF407D00C02357 /* LoginViewController.m */; };
 		9303300A13EF407D00C02357 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9303300813EF407D00C02357 /* LoginViewController.xib */; };
+		933B99B713F6F4D8001E3329 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 933B99B613F6F4D8001E3329 /* XPathQuery.m */; };
+		933B99BA13F6F4EC001E3329 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 933B99B913F6F4EC001E3329 /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,9 @@
 		9303300613EF407D00C02357 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		9303300713EF407D00C02357 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		9303300813EF407D00C02357 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		933B99B513F6F4D8001E3329 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		933B99B613F6F4D8001E3329 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		933B99B913F6F4EC001E3329 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				933B99BA13F6F4EC001E3329 /* libxml2.dylib in Frameworks */,
 				9303300213EF24FE00C02357 /* QuartzCore.framework in Frameworks */,
 				93032F7E13EF21E900C02357 /* UIKit.framework in Frameworks */,
 				93032F8013EF21E900C02357 /* Foundation.framework in Frameworks */,
@@ -114,6 +120,7 @@
 		93032F7C13EF21E900C02357 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				933B99B913F6F4EC001E3329 /* libxml2.dylib */,
 				9303300113EF24FE00C02357 /* QuartzCore.framework */,
 				93032F7D13EF21E900C02357 /* UIKit.framework */,
 				93032F7F13EF21E900C02357 /* Foundation.framework */,
@@ -155,6 +162,7 @@
 		93032F9D13EF225A00C02357 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				933B99B413F6F4D8001E3329 /* XPathQuery */,
 				93032FB713EF243D00C02357 /* JSONKit */,
 				93032F9E13EF226A00C02357 /* AFNetworking */,
 			);
@@ -212,6 +220,16 @@
 			);
 			name = SVProgressHUD;
 			path = Orca/Controls/SVProgressHUD/SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		933B99B413F6F4D8001E3329 /* XPathQuery */ = {
+			isa = PBXGroup;
+			children = (
+				933B99B513F6F4D8001E3329 /* XPathQuery.h */,
+				933B99B613F6F4D8001E3329 /* XPathQuery.m */,
+			);
+			name = XPathQuery;
+			path = Orca/Libraries/XPathQuery;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +309,7 @@
 				9303300013EF24F000C02357 /* SVProgressHUD.m in Sources */,
 				9303300513EF278100C02357 /* OrcaAPIClient.m in Sources */,
 				9303300913EF407D00C02357 /* LoginViewController.m in Sources */,
+				933B99B713F6F4D8001E3329 /* XPathQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +391,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Orca/Orca-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "Orca/Orca-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -383,6 +403,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Orca/Orca-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "Orca/Orca-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -408,6 +429,7 @@
 				93032F9C13EF21E900C02357 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

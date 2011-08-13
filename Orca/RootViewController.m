@@ -8,18 +8,19 @@
 
 #import "RootViewController.h"
 #import "LoginViewController.h"
-@implementation RootViewController
+#import "XPathQuery.h"
 
+@implementation RootViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-//    [[OrcaAPIClient sharedClient] getPath:@"ERG-Seattle/welcomePage.do?m=5" parameters:[NSDictionary dictionary] success:^(id response) {
-//        NSLog(@"yay: %@", response);
-//    } failure:^(NSError *error) {
-//        NSLog(@"boo: %@", error);
-//    }];
+    [[OrcaAPIClient sharedClient] getPath:@"ERG-Seattle/welcomePage.do?m=52" parameters:[NSDictionary dictionary] success:^(id response) {
+        NSLog(@"%@", response);
+    } failure:^(NSError *error) {
+        NSLog(@"boo: %@", error);
+    }];
     
 //    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
 //    [dict setObject:@"aaronbrethorst" forKey:@"j_username"];
