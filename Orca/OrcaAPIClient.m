@@ -75,7 +75,6 @@ NSString * const kOrcaBaseURLString = @"http://www.orcacard.com/";
     
 	[request setURL:url];
 	[request setHTTPMethod:method];
-	[request setHTTPShouldHandleCookies:NO];
 	[request setAllHTTPHeaderFields:headers];
     
 	return request;
