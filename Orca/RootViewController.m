@@ -12,6 +12,7 @@
 @interface RootViewController ()
 - (void)logIn;
 - (void)logOut;
+- (void)displayLoginViewController;
 @end
 
 @implementation RootViewController
@@ -35,10 +36,7 @@
     }
     else
     {
-        LoginViewController *login = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
-        login.delegate = self;
-        UINavigationController *nav = [[[UINavigationController alloc] initWithRootViewController:login] autorelease];
-        [self presentModalViewController:nav animated:YES];
+        [self displayLoginViewController];
     }
 }
 
@@ -109,9 +107,18 @@
 
 - (void)logOut
 {
-    [OrcaCredentials logOut];    
+    [OrcaCredentials logOut];
     self.cards = [NSArray array];
     [self.tableView reloadData];
+    [self displayLoginViewController];
+}
+
+- (void)displayLoginViewController;
+{
+    LoginViewController *login = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
+    login.delegate = self;
+    UINavigationController *nav = [[[UINavigationController alloc] initWithRootViewController:login] autorelease];
+    [self presentModalViewController:nav animated:YES];
 }
 
 #pragma mark - UITableView
