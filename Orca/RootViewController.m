@@ -113,6 +113,11 @@
     return NSLocalizedString(@"My Cards", @"");
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+{
+    return NSLocalizedString(@"Created by Aaron Brethorst. In no way approved by the Orca Card people. Uses SVProgressHUD, AFNetworking, SFHFKeychain, XPathQuery, JSONKit.\n\nSee http://bit.ly/orca-ios for more.", @"");
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
