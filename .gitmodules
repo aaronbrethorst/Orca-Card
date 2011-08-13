@@ -7,3 +7,6 @@
 [submodule "Orca/Controls/SVProgressHUD"]
 	path = Orca/Controls/SVProgressHUD
 	url = git://github.com/samvermette/SVProgressHUD.git
+[submodule "Orca/Libraries/SFHFiPhone"]
+	path = Orca/Libraries/SFHFiPhone
+	url = git://github.com/ldandersen/scifihifi-iphone.git

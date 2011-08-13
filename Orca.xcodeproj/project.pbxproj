@@ -31,8 +31,8 @@
 		9303300513EF278100C02357 /* OrcaAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9303300413EF278100C02357 /* OrcaAPIClient.m */; };
 		9303300913EF407D00C02357 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9303300713EF407D00C02357 /* LoginViewController.m */; };
 		9303300A13EF407D00C02357 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9303300813EF407D00C02357 /* LoginViewController.xib */; };
-		931FCFE513F701F900847D0C /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 931FCFE413F701F900847D0C /* LoginManager.m */; };
 		931FCFE913F7111C00847D0C /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 931FCFE813F7111C00847D0C /* Card.m */; };
+		931FCFEC13F733E000847D0C /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 931FCFEB13F733E000847D0C /* LoginManager.m */; };
 		933B99B713F6F4D8001E3329 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 933B99B613F6F4D8001E3329 /* XPathQuery.m */; };
 		933B99BA13F6F4EC001E3329 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 933B99B913F6F4EC001E3329 /* libxml2.dylib */; };
 		933B99BD13F6F8F2001E3329 /* AFDataRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 933B99BC13F6F8F2001E3329 /* AFDataRequestOperation.m */; };
@@ -80,10 +80,10 @@
 		9303300613EF407D00C02357 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		9303300713EF407D00C02357 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		9303300813EF407D00C02357 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		931FCFE313F701F900847D0C /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
-		931FCFE413F701F900847D0C /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
 		931FCFE713F7111C00847D0C /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		931FCFE813F7111C00847D0C /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		931FCFEA13F733E000847D0C /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
+		931FCFEB13F733E000847D0C /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
 		933B99B513F6F4D8001E3329 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		933B99B613F6F4D8001E3329 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		933B99B913F6F4EC001E3329 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -110,8 +110,6 @@
 		93032F6E13EF21E900C02357 = {
 			isa = PBXGroup;
 			children = (
-				931FCFE313F701F900847D0C /* LoginManager.h */,
-				931FCFE413F701F900847D0C /* LoginManager.m */,
 				93032FFA13EF24E500C02357 /* Controls */,
 				93032F9D13EF225A00C02357 /* Libraries */,
 				93032F8313EF21E900C02357 /* Orca */,
@@ -143,6 +141,8 @@
 		93032F8313EF21E900C02357 /* Orca */ = {
 			isa = PBXGroup;
 			children = (
+				931FCFEA13F733E000847D0C /* LoginManager.h */,
+				931FCFEB13F733E000847D0C /* LoginManager.m */,
 				93032F8C13EF21E900C02357 /* OrcaAppDelegate.h */,
 				93032F8D13EF21E900C02357 /* OrcaAppDelegate.m */,
 				93032F8F13EF21E900C02357 /* MainWindow.xib */,
@@ -326,8 +326,8 @@
 				9303300913EF407D00C02357 /* LoginViewController.m in Sources */,
 				933B99B713F6F4D8001E3329 /* XPathQuery.m in Sources */,
 				933B99BD13F6F8F2001E3329 /* AFDataRequestOperation.m in Sources */,
-				931FCFE513F701F900847D0C /* LoginManager.m in Sources */,
 				931FCFE913F7111C00847D0C /* Card.m in Sources */,
+				931FCFEC13F733E000847D0C /* LoginManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

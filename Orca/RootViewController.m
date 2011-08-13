@@ -133,7 +133,6 @@
     return [self.cards count];
 }
 
-// Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
@@ -145,6 +144,7 @@
     }
     
     Card *c = [self.cards objectAtIndex:indexPath.row];
+    
     if (c.cardNickname && ![c.cardNickname isEqual:@""])
     {
         cell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)", c.cardNickname, c.cardID];
@@ -153,36 +153,20 @@
     {
         cell.textLabel.text = c.cardID;
     }
+    
     cell.detailTextLabel.text = c.balance;
     
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-	*/
-}
-
 - (void)didReceiveMemoryWarning
 {
-    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
-    // Relinquish ownership any cached data, images, etc that aren't in use.
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-
-    // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
-    // For example: self.myOutlet = nil;
 }
 
 - (void)dealloc
