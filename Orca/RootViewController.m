@@ -95,7 +95,7 @@
 
 - (void)displayLoginViewController;
 {
-    LoginViewController *login = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
+    LoginViewController *login = [[[LoginViewController alloc] initWithStyle:UITableViewStyleGrouped] autorelease];
     login.delegate = self;
     UINavigationController *nav = [[[UINavigationController alloc] initWithRootViewController:login] autorelease];
     [self presentModalViewController:nav animated:YES];

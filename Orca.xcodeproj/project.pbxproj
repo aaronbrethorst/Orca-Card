@@ -22,7 +22,6 @@
 		9303300213EF24FE00C02357 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9303300113EF24FE00C02357 /* QuartzCore.framework */; };
 		9303300513EF278100C02357 /* OrcaAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9303300413EF278100C02357 /* OrcaAPIClient.m */; };
 		9303300913EF407D00C02357 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9303300713EF407D00C02357 /* LoginViewController.m */; };
-		9303300A13EF407D00C02357 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9303300813EF407D00C02357 /* LoginViewController.xib */; };
 		931FCFE913F7111C00847D0C /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 931FCFE813F7111C00847D0C /* Card.m */; };
 		931FCFEC13F733E000847D0C /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 931FCFEB13F733E000847D0C /* LoginManager.m */; };
 		931FCFF013F733FF00847D0C /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 931FCFEF13F733FF00847D0C /* SFHFKeychainUtils.m */; };
@@ -68,7 +67,6 @@
 		9303300413EF278100C02357 /* OrcaAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrcaAPIClient.m; sourceTree = "<group>"; };
 		9303300613EF407D00C02357 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		9303300713EF407D00C02357 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		9303300813EF407D00C02357 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		931FCFE713F7111C00847D0C /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		931FCFE813F7111C00847D0C /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		931FCFEA13F733E000847D0C /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 				9303300413EF278100C02357 /* OrcaAPIClient.m */,
 				9303300613EF407D00C02357 /* LoginViewController.h */,
 				9303300713EF407D00C02357 /* LoginViewController.m */,
-				9303300813EF407D00C02357 /* LoginViewController.xib */,
 				931FCFE713F7111C00847D0C /* Card.h */,
 				931FCFE813F7111C00847D0C /* Card.m */,
 				931FCFF313F735A900847D0C /* OrcaCredentials.h */,
@@ -327,7 +324,6 @@
 				93032F9113EF21E900C02357 /* MainWindow.xib in Resources */,
 				93032F9713EF21E900C02357 /* RootViewController.xib in Resources */,
 				93032FFF13EF24F000C02357 /* SVProgressHUD.bundle in Resources */,
-				9303300A13EF407D00C02357 /* LoginViewController.xib in Resources */,
 				931FD01713F73A4900847D0C /* Icon.png in Resources */,
 				931FD01813F73A4900847D0C /* Icon@2x.png in Resources */,
 			);

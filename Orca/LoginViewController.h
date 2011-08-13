@@ -12,9 +12,15 @@
 - (void)didStoreUsernamePassword;
 @end
 
-@interface LoginViewController : UIViewController
-@property(nonatomic,retain) IBOutlet UITextField *username;
-@property(nonatomic,retain) IBOutlet UITextField *password;
+@interface LoginViewController : UITableViewController <UITextFieldDelegate>
+{
+    UITableViewCell *usernameCell;
+    UITableViewCell *passwordCell;
+    UITableViewCell *buttonCell;
+    
+    UITextField *username;
+    UITextField *password;
+}
 @property(nonatomic,assign) id<LoginViewControllerDelegate> delegate;
 - (IBAction)storeCredentials:(id)sender;
 @end
