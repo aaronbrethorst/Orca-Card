@@ -33,6 +33,7 @@
 		9303300A13EF407D00C02357 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9303300813EF407D00C02357 /* LoginViewController.xib */; };
 		933B99B713F6F4D8001E3329 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 933B99B613F6F4D8001E3329 /* XPathQuery.m */; };
 		933B99BA13F6F4EC001E3329 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 933B99B913F6F4EC001E3329 /* libxml2.dylib */; };
+		933B99BD13F6F8F2001E3329 /* AFDataRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 933B99BC13F6F8F2001E3329 /* AFDataRequestOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,8 @@
 		933B99B513F6F4D8001E3329 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		933B99B613F6F4D8001E3329 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		933B99B913F6F4EC001E3329 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		933B99BB13F6F8F2001E3329 /* AFDataRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDataRequestOperation.h; sourceTree = "<group>"; };
+		933B99BC13F6F8F2001E3329 /* AFDataRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFDataRequestOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +191,8 @@
 				93032FAC13EF226A00C02357 /* UIImage+AFNetworking.m */,
 				93032FAD13EF226A00C02357 /* UIImageView+AFNetworking.h */,
 				93032FAE13EF226A00C02357 /* UIImageView+AFNetworking.m */,
+				933B99BB13F6F8F2001E3329 /* AFDataRequestOperation.h */,
+				933B99BC13F6F8F2001E3329 /* AFDataRequestOperation.m */,
 			);
 			name = AFNetworking;
 			path = Orca/Libraries/AFNetworking/AFNetworking;
@@ -310,6 +315,7 @@
 				9303300513EF278100C02357 /* OrcaAPIClient.m in Sources */,
 				9303300913EF407D00C02357 /* LoginViewController.m in Sources */,
 				933B99B713F6F4D8001E3329 /* XPathQuery.m in Sources */,
+				933B99BD13F6F8F2001E3329 /* AFDataRequestOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

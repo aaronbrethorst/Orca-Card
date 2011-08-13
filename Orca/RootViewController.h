@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginViewController.h"
 
-@interface RootViewController : UITableViewController
+@interface RootViewController : UITableViewController <LoginViewControllerDelegate>
 
 @end

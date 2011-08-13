@@ -10,6 +10,7 @@
 
 @implementation LoginViewController
 @synthesize webView;
+@synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -18,6 +19,13 @@
         // Custom initialization
     }
     return self;
+}
+
+- (void)dealloc
+{
+    self.delegate = nil;
+    
+    [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,9 +68,15 @@
     
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView
+- (void)webViewDidFinishLoad:(UIWebView *)wv
 {
-    NSLog(@"%@", [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]);
+    NSString *result = [wv stringByEvaluatingJavaScriptFromString:@"document.evaluate(\"//h2[@id='start-content']/span\", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem().innerText"];
+    
+    if ([result rangeOfString:@"you're logged in"].location != NSNotFound)
+    {
+        [self.delegate loginDidFinish];
+        [self dismissModalViewControllerAnimated:YES];
+    }
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
