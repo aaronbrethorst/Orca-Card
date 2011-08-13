@@ -10,6 +10,7 @@
 
 @interface RootViewController ()
 - (void)logIn;
+- (void)logOut;
 @end
 
 @implementation RootViewController
@@ -18,6 +19,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.title = NSLocalizedString(@"Orca Balance", @"");
+    
+    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Sign Out", @"") style:UIBarButtonItemStyleBordered target:self action:@selector(logOut)] autorelease];
+    
+    self.navigationItem.rightBarButtonItem.enabled = NO;
     
     self.cards = [NSArray array];
     
@@ -66,6 +73,7 @@
     [[OrcaAPIClient sharedClient] retrieveCards:^(id response) {
         self.cards = response;
         [self.tableView reloadData];
+        self.navigationItem.rightBarButtonItem.enabled = YES;
     } failure:^(NSError *error) {
         NSLog(@"%@", error);
     }];
@@ -73,7 +81,12 @@
 
 - (void)loginDidFail
 {
-    NSLog(@"");
+    [self logOut];
+    
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Login Failed", @"") message:NSLocalizedString(@"Unable to log you in. Please check your username and password and try again.", @"") delegate:nil cancelButtonTitle:NSLocalizedString(@"Dismiss", @"") otherButtonTitles:nil] autorelease];
+    [alert show];
+    
+    self.navigationItem.rightBarButtonItem.enabled = NO;
 }
 
 #pragma mark - LoginViewControllerDelegate
@@ -93,9 +106,23 @@
                  password:[[NSUserDefaults standardUserDefaults] objectForKey:@"password"]];    
 }
 
+- (void)logOut
+{
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"username"];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"password"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    self.cards = [NSArray array];
+    [self.tableView reloadData];
+}
+
 #pragma mark - UITableView
 
-// Customize the number of sections in the table view.
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return NSLocalizedString(@"My Cards", @"");
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -115,7 +142,6 @@
     if (cell == nil)
     {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     Card *c = [self.cards objectAtIndex:indexPath.row];
