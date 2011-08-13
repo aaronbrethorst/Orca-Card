@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "OrcaCredentials.h"
 
 @implementation LoginViewController
 @synthesize username, password;
@@ -59,10 +60,7 @@
 
 - (IBAction)storeCredentials:(id)sender
 {
-    [[NSUserDefaults standardUserDefaults] setObject:self.username.text forKey:@"username"];
-    [[NSUserDefaults standardUserDefaults] setObject:self.password.text forKey:@"password"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
+    [OrcaCredentials setUsername:self.username.text password:self.password.text];
     [self.delegate didStoreUsernamePassword];
     
     [self dismissModalViewControllerAnimated:YES];

@@ -33,6 +33,9 @@
 		9303300A13EF407D00C02357 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9303300813EF407D00C02357 /* LoginViewController.xib */; };
 		931FCFE913F7111C00847D0C /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 931FCFE813F7111C00847D0C /* Card.m */; };
 		931FCFEC13F733E000847D0C /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 931FCFEB13F733E000847D0C /* LoginManager.m */; };
+		931FCFF013F733FF00847D0C /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 931FCFEF13F733FF00847D0C /* SFHFKeychainUtils.m */; };
+		931FCFF213F7341400847D0C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931FCFF113F7341400847D0C /* Security.framework */; };
+		931FCFF513F735A900847D0C /* OrcaCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 931FCFF413F735A900847D0C /* OrcaCredentials.m */; };
 		933B99B713F6F4D8001E3329 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 933B99B613F6F4D8001E3329 /* XPathQuery.m */; };
 		933B99BA13F6F4EC001E3329 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 933B99B913F6F4EC001E3329 /* libxml2.dylib */; };
 		933B99BD13F6F8F2001E3329 /* AFDataRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 933B99BC13F6F8F2001E3329 /* AFDataRequestOperation.m */; };
@@ -84,6 +87,11 @@
 		931FCFE813F7111C00847D0C /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		931FCFEA13F733E000847D0C /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
 		931FCFEB13F733E000847D0C /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
+		931FCFEE13F733FF00847D0C /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
+		931FCFEF13F733FF00847D0C /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		931FCFF113F7341400847D0C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		931FCFF313F735A900847D0C /* OrcaCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrcaCredentials.h; sourceTree = "<group>"; };
+		931FCFF413F735A900847D0C /* OrcaCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrcaCredentials.m; sourceTree = "<group>"; };
 		933B99B513F6F4D8001E3329 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		933B99B613F6F4D8001E3329 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		933B99B913F6F4EC001E3329 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -96,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				931FCFF213F7341400847D0C /* Security.framework in Frameworks */,
 				933B99BA13F6F4EC001E3329 /* libxml2.dylib in Frameworks */,
 				9303300213EF24FE00C02357 /* QuartzCore.framework in Frameworks */,
 				93032F7E13EF21E900C02357 /* UIKit.framework in Frameworks */,
@@ -129,6 +138,7 @@
 		93032F7C13EF21E900C02357 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				931FCFF113F7341400847D0C /* Security.framework */,
 				933B99B913F6F4EC001E3329 /* libxml2.dylib */,
 				9303300113EF24FE00C02357 /* QuartzCore.framework */,
 				93032F7D13EF21E900C02357 /* UIKit.framework */,
@@ -157,6 +167,8 @@
 				9303300813EF407D00C02357 /* LoginViewController.xib */,
 				931FCFE713F7111C00847D0C /* Card.h */,
 				931FCFE813F7111C00847D0C /* Card.m */,
+				931FCFF313F735A900847D0C /* OrcaCredentials.h */,
+				931FCFF413F735A900847D0C /* OrcaCredentials.m */,
 			);
 			path = Orca;
 			sourceTree = "<group>";
@@ -175,6 +187,7 @@
 		93032F9D13EF225A00C02357 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				931FCFED13F733FF00847D0C /* SFHFKeychain */,
 				933B99B413F6F4D8001E3329 /* XPathQuery */,
 				93032FB713EF243D00C02357 /* JSONKit */,
 				93032F9E13EF226A00C02357 /* AFNetworking */,
@@ -235,6 +248,16 @@
 			);
 			name = SVProgressHUD;
 			path = Orca/Controls/SVProgressHUD/SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		931FCFED13F733FF00847D0C /* SFHFKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				931FCFEE13F733FF00847D0C /* SFHFKeychainUtils.h */,
+				931FCFEF13F733FF00847D0C /* SFHFKeychainUtils.m */,
+			);
+			name = SFHFKeychain;
+			path = Orca/Libraries/SFHFiPhone/security;
 			sourceTree = "<group>";
 		};
 		933B99B413F6F4D8001E3329 /* XPathQuery */ = {
@@ -328,6 +351,8 @@
 				933B99BD13F6F8F2001E3329 /* AFDataRequestOperation.m in Sources */,
 				931FCFE913F7111C00847D0C /* Card.m in Sources */,
 				931FCFEC13F733E000847D0C /* LoginManager.m in Sources */,
+				931FCFF013F733FF00847D0C /* SFHFKeychainUtils.m in Sources */,
+				931FCFF513F735A900847D0C /* OrcaCredentials.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

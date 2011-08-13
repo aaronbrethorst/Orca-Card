@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "OrcaCredentials.h"
 
 @interface RootViewController ()
 - (void)logIn;
@@ -28,7 +29,7 @@
     
     self.cards = [NSArray array];
     
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"username"] && [[NSUserDefaults standardUserDefaults] objectForKey:@"password"])
+    if ([OrcaCredentials hasCredentials])
     {
         [self logIn];
     }
@@ -102,16 +103,13 @@
 {
     lm = [[LoginManager alloc] init];
     lm.delegate = self;
-    [lm loginWithUsername:[[NSUserDefaults standardUserDefaults] objectForKey:@"username"]
-                 password:[[NSUserDefaults standardUserDefaults] objectForKey:@"password"]];    
+    [lm loginWithUsername:[OrcaCredentials username]
+                 password:[OrcaCredentials password]];
 }
 
 - (void)logOut
 {
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"username"];
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"password"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
+    [OrcaCredentials logOut];    
     self.cards = [NSArray array];
     [self.tableView reloadData];
 }
