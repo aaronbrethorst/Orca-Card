@@ -64,6 +64,12 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    
+    [username release];
+    [password release];
+    [usernameCell release];
+    [passwordCell release];
+    [buttonCell release];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -92,6 +98,11 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 3;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+{
+    return NSLocalizedString(@"Your password is securely stored and is never transmitted in plain text.", @"");
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

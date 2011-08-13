@@ -53,8 +53,11 @@
         self.cards = response;
         [self.tableView reloadData];
         self.navigationItem.rightBarButtonItem.enabled = YES;
+        [SVProgressHUD dismissWithSuccess:NSLocalizedString(@"All Done!", @"") afterDelay:.5f];
     } failure:^(NSError *error) {
-        NSLog(@"%@", error);
+        [SVProgressHUD dismiss];
+        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"") message:[error localizedDescription] delegate:nil cancelButtonTitle:NSLocalizedString(@"Dismiss", @"") otherButtonTitles:nil] autorelease];
+        [alert show];
     }];
 }
 
@@ -79,6 +82,8 @@
 
 - (void)logIn
 {
+    [SVProgressHUD showInView:self.view];
+    
     lm = [[LoginManager alloc] init];
     lm.delegate = self;
     [lm loginWithUsername:[OrcaCredentials username]
@@ -126,6 +131,7 @@
     if (cell == nil)
     {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     Card *c = [self.cards objectAtIndex:indexPath.row];
