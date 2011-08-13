@@ -37,6 +37,8 @@
 		931FD00F13F7381500847D0C /* AFRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 931FD00413F7381500847D0C /* AFRestClient.m */; };
 		931FD01013F7381500847D0C /* UIImage+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 931FD00613F7381500847D0C /* UIImage+AFNetworking.m */; };
 		931FD01113F7381500847D0C /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 931FD00813F7381500847D0C /* UIImageView+AFNetworking.m */; };
+		931FD01713F73A4900847D0C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 931FD01513F73A4900847D0C /* Icon.png */; };
+		931FD01813F73A4900847D0C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 931FD01613F73A4900847D0C /* Icon@2x.png */; };
 		933B99B713F6F4D8001E3329 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 933B99B613F6F4D8001E3329 /* XPathQuery.m */; };
 		933B99BA13F6F4EC001E3329 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 933B99B913F6F4EC001E3329 /* libxml2.dylib */; };
 /* End PBXBuildFile section */
@@ -94,6 +96,8 @@
 		931FD00613F7381500847D0C /* UIImage+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AFNetworking.m"; sourceTree = "<group>"; };
 		931FD00713F7381500847D0C /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		931FD00813F7381500847D0C /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		931FD01513F73A4900847D0C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		931FD01613F73A4900847D0C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		933B99B513F6F4D8001E3329 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		933B99B613F6F4D8001E3329 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		933B99B913F6F4EC001E3329 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -176,6 +180,8 @@
 		93032F8413EF21E900C02357 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				931FD01513F73A4900847D0C /* Icon.png */,
+				931FD01613F73A4900847D0C /* Icon@2x.png */,
 				93032F8513EF21E900C02357 /* Orca-Info.plist */,
 				93032F8613EF21E900C02357 /* InfoPlist.strings */,
 				93032F8913EF21E900C02357 /* main.m */,
@@ -322,6 +328,8 @@
 				93032F9713EF21E900C02357 /* RootViewController.xib in Resources */,
 				93032FFF13EF24F000C02357 /* SVProgressHUD.bundle in Resources */,
 				9303300A13EF407D00C02357 /* LoginViewController.xib in Resources */,
+				931FD01713F73A4900847D0C /* Icon.png in Resources */,
+				931FD01813F73A4900847D0C /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
