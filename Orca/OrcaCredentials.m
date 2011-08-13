@@ -8,8 +8,6 @@
 
 #import "OrcaCredentials.h"
 
-#define kKeychainServiceName @"com.structlab.orca"
-
 @implementation OrcaCredentials
 
 + (BOOL)hasCredentials
@@ -24,19 +22,19 @@
 
 + (NSString*)password
 {
-    return [SFHFKeychainUtils getPasswordForUsername:[OrcaCredentials username] andServiceName:kKeychainServiceName error:nil];    
+    return [SFHFKeychainUtils getPasswordForUsername:[OrcaCredentials username] andServiceName:[[NSBundle mainBundle] bundleIdentifier] error:nil];    
 }
 
 + (void)logOut
 {
-    [SFHFKeychainUtils deleteItemForUsername:[OrcaCredentials username] andServiceName:kKeychainServiceName error:nil];
+    [SFHFKeychainUtils deleteItemForUsername:[OrcaCredentials username] andServiceName:[[NSBundle mainBundle] bundleIdentifier] error:nil];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"username"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 + (void)setUsername:(NSString*)aUsername password:(NSString*)aPassword
 {
-    [SFHFKeychainUtils storeUsername:aUsername andPassword:aPassword forServiceName:kKeychainServiceName updateExisting:YES error:nil];
+    [SFHFKeychainUtils storeUsername:aUsername andPassword:aPassword forServiceName:[[NSBundle mainBundle] bundleIdentifier] updateExisting:YES error:nil];
     [[NSUserDefaults standardUserDefaults] setObject:aUsername forKey:@"username"];
     [[NSUserDefaults standardUserDefaults] synchronize];    
 }
