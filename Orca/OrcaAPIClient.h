@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "AFRestClient.h"
+#import "Card.h"
 
 extern NSString * const kOrcaBaseURLString;
 
 @interface OrcaAPIClient : AFRestClient
 + (id)sharedClient;
+- (void)retrieveCards:(void (^)(id response))success failure:(void (^)(NSError *error))failure;
 @end
-

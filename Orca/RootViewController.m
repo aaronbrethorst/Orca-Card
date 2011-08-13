@@ -7,17 +7,19 @@
 //
 
 #import "RootViewController.h"
-#import "XPathQuery.h"
 
 @interface RootViewController ()
 - (void)logIn;
 @end
 
 @implementation RootViewController
+@synthesize cards;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.cards = [NSArray array];
     
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"username"] && [[NSUserDefaults standardUserDefaults] objectForKey:@"password"])
     {
@@ -61,14 +63,12 @@
 
 - (void)loginDidFinish
 {
-    [[OrcaAPIClient sharedClient] getPath:@"ERG-Seattle/welcomePage.do?m=52" parameters:[NSDictionary dictionary] success:^(id response) {
-        NSArray *nodes = PerformHTMLXPathQuery(response, @"//td[@class='currency']");
-        NSString *textResp = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
-        
-        NSLog(@"Found nodes: %@", nodes);
-        
+    [[OrcaAPIClient sharedClient] retrieveCards:^(id response) {
+        NSLog(@"here?");
+        self.cards = response;
+        [self.tableView reloadData];
     } failure:^(NSError *error) {
-        NSLog(@"boo: %@", error);
+        NSLog(@"%@", error);
     }];
 }
 
@@ -104,7 +104,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return [self.cards count];
 }
 
 // Customize the appearance of table view cells.
@@ -116,8 +116,10 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
-
-    // Configure the cell.
+    
+    Card *c = [self.cards objectAtIndex:indexPath.row];
+    cell.textLabel.text = c.balance;
+    
     return cell;
 }
 
@@ -150,6 +152,8 @@
 
 - (void)dealloc
 {
+    self.cards = nil;
+    
     [lm release];
     
     [super dealloc];

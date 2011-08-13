@@ -13,5 +13,7 @@
 @interface RootViewController : UITableViewController <LoginManagerDelegate, LoginViewControllerDelegate>
 {
     LoginManager *lm;
+    NSArray *cards;
 }
+@property(nonatomic,retain) NSArray *cards;
 @end

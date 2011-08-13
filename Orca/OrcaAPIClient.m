@@ -7,12 +7,48 @@
 //
 
 #import "OrcaAPIClient.h"
+#import "XPathQuery.h"
 
 static OrcaAPIClient *_sharedClient = nil;
 
 NSString * const kOrcaBaseURLString = @"http://www.orcacard.com/";
 
 @implementation OrcaAPIClient
+
+#pragma mark - API
+
+- (void)retrieveCards:(void (^)(id response))success failure:(void (^)(NSError *error))failure
+{
+    [[OrcaAPIClient sharedClient] getPath:@"ERG-Seattle/p7_002ad.do" parameters:[NSDictionary dictionary] success:^(id response) {
+        
+        // How many rows are there in the first table?
+        int numberOfCards = [PerformHTMLXPathQuery(response, @"//table[@class='data'][1]//tbody/tr") count];
+        
+        NSMutableArray *cards = [NSMutableArray arrayWithCapacity:numberOfCards];
+        
+        for (int i=1; i<=numberOfCards;i++)
+        {
+            NSString *expression = [NSString stringWithFormat:@"//table[@class='data'][1]//tbody/tr[%d]", i];
+            NSArray *result = PerformHTMLXPathQuery(response, expression);
+            
+            Card *card = [[Card alloc] init];
+            
+            card.cardID = [[[[[[result objectAtIndex:0] objectForKey:@"nodeChildArray"] objectAtIndex:0] objectForKey:@"nodeChildArray"] objectAtIndex:0] objectForKey:@"nodeContent"];
+            card.cardNickname = [[[[result objectAtIndex:0] objectForKey:@"nodeChildArray"] objectAtIndex:1] objectForKey:@"nodeContent"];
+            card.passengerType = [[[[result objectAtIndex:0] objectForKey:@"nodeChildArray"] objectAtIndex:2] objectForKey:@"nodeContent"];
+            card.balance = [[[[result objectAtIndex:0] objectForKey:@"nodeChildArray"] objectAtIndex:3] objectForKey:@"nodeContent"];
+            card.cardStatus = [[[[result objectAtIndex:0] objectForKey:@"nodeChildArray"] objectAtIndex:4] objectForKey:@"nodeContent"];
+ 
+            [cards addObject:card];
+            [card release];
+        }
+        
+        success(cards);
+        
+    } failure:failure];
+}
+
+#pragma mark - Base Methods
 
 + (id)sharedClient
 {
@@ -25,16 +61,6 @@ NSString * const kOrcaBaseURLString = @"http://www.orcacard.com/";
     }
     
     return _sharedClient;
-}
-
-- (id)init
-{
-    self = [super init];
-    if (self)
-    {
-        //
-    }
-    return self;
 }
 
 + (NSURL *)baseURL
