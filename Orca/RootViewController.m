@@ -64,7 +64,6 @@
 - (void)loginDidFinish
 {
     [[OrcaAPIClient sharedClient] retrieveCards:^(id response) {
-        NSLog(@"here?");
         self.cards = response;
         [self.tableView reloadData];
     } failure:^(NSError *error) {
@@ -113,12 +112,22 @@
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    if (cell == nil)
+    {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     Card *c = [self.cards objectAtIndex:indexPath.row];
-    cell.textLabel.text = c.balance;
+    if (c.cardNickname && ![c.cardNickname isEqual:@""])
+    {
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)", c.cardNickname, c.cardID];
+    }
+    else
+    {
+        cell.textLabel.text = c.cardID;
+    }
+    cell.detailTextLabel.text = c.balance;
     
     return cell;
 }
