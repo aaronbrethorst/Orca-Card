@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @protocol LoginViewControllerDelegate <NSObject>
-- (void)loginDidFinish;
+- (void)didStoreUsernamePassword;
 @end
 
 @interface LoginViewController : UIViewController
+@property(nonatomic,retain) IBOutlet UITextField *username;
+@property(nonatomic,retain) IBOutlet UITextField *password;
 @property(nonatomic,assign) id<LoginViewControllerDelegate> delegate;
-@property(nonatomic,retain) IBOutlet UIWebView *webView;
+- (IBAction)storeCredentials:(id)sender;
 @end

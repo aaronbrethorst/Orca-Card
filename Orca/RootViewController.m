@@ -9,19 +9,27 @@
 #import "RootViewController.h"
 #import "XPathQuery.h"
 
+@interface RootViewController ()
+- (void)logIn;
+@end
+
 @implementation RootViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        
-    lm = [[LoginManager alloc] init];
-    lm.delegate = self;
-    [lm loginWithUsername:@"aaronbrethorst" password:@"ABE143st"];
-//    LoginViewController *login = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
-//    login.delegate = self;
-//    UINavigationController *nav = [[[UINavigationController alloc] initWithRootViewController:login] autorelease];
-//    [self presentModalViewController:nav animated:YES];
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"username"] && [[NSUserDefaults standardUserDefaults] objectForKey:@"password"])
+    {
+        [self logIn];
+    }
+    else
+    {
+        LoginViewController *login = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
+        login.delegate = self;
+        UINavigationController *nav = [[[UINavigationController alloc] initWithRootViewController:login] autorelease];
+        [self presentModalViewController:nav animated:YES];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -49,7 +57,7 @@
 	return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-#pragma mark - LoginViewControllerDelegate
+#pragma mark - LoginManagerDelegate
 
 - (void)loginDidFinish
 {
@@ -62,21 +70,28 @@
     } failure:^(NSError *error) {
         NSLog(@"boo: %@", error);
     }];
-    
-    //    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    //    [dict setObject:@"aaronbrethorst" forKey:@"j_username"];
-    //    [dict setObject:@"ABE143st" forKey:@"j_password"];
-    //    
-    //    [[OrcaAPIClient sharedClient] postPath:@"/ERG-Seattle/j_security_check" parameters:dict success:^(id response) {
-    //        NSLog(@"%@", response);
-    //    } failure:^(NSError *error) {
-    //        NSLog(@"%@", error);
-    //    }];
 }
 
 - (void)loginDidFail
 {
     NSLog(@"");
+}
+
+#pragma mark - LoginViewControllerDelegate
+
+- (void)didStoreUsernamePassword
+{
+    [self logIn];
+}
+
+#pragma mark - Private Methods
+
+- (void)logIn
+{
+    lm = [[LoginManager alloc] init];
+    lm.delegate = self;
+    [lm loginWithUsername:[[NSUserDefaults standardUserDefaults] objectForKey:@"username"]
+                 password:[[NSUserDefaults standardUserDefaults] objectForKey:@"password"]];    
 }
 
 #pragma mark - UITableView
@@ -135,6 +150,8 @@
 
 - (void)dealloc
 {
+    [lm release];
+    
     [super dealloc];
 }
 

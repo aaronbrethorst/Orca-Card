@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "LoginViewController.h"
+#import "LoginViewController.h"
 #import "LoginManager.h"
 
-@interface RootViewController : UITableViewController <LoginManagerDelegate> // <LoginViewControllerDelegate>
+@interface RootViewController : UITableViewController <LoginManagerDelegate, LoginViewControllerDelegate>
 {
     LoginManager *lm;
 }

@@ -9,7 +9,7 @@
 #import "LoginViewController.h"
 
 @implementation LoginViewController
-@synthesize webView;
+@synthesize username, password;
 @synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -41,14 +41,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.orcacard.com/ERG-Seattle/welcomePage.do?m=5"]]];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    self.webView = nil;
+    self.username = nil;
+    self.password = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -56,32 +55,17 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-#pragma mark - UIWebViewDelegate
+#pragma mark - IBActions
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+- (IBAction)storeCredentials:(id)sender
 {
-    return YES;
-}
-
-- (void)webViewDidStartLoad:(UIWebView *)webView
-{
+    [[NSUserDefaults standardUserDefaults] setObject:self.username.text forKey:@"username"];
+    [[NSUserDefaults standardUserDefaults] setObject:self.password.text forKey:@"password"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)wv
-{
-    NSString *result = [wv stringByEvaluatingJavaScriptFromString:@"document.evaluate(\"//h2[@id='start-content']/span\", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem().innerText"];
+    [self.delegate didStoreUsernamePassword];
     
-    if ([result rangeOfString:@"you're logged in"].location != NSNotFound)
-    {
-        [self.delegate loginDidFinish];
-        [self dismissModalViewControllerAnimated:YES];
-    }
-}
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
-{
-    
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end
