@@ -7,6 +7,14 @@ So, I banged out this app in an afternoon. Of course, Orca's Terms of Use prohib
 
 ![Screenshot of App](https://github.com/aaronbrethorst/Orca-Card/raw/master/screenshot.jpg)
 
+How to Use
+===========
+
+    git clone git://github.com/aaronbrethorst/Orca-Card.git
+    cd Orca-Card
+    git submodule init
+    git submodule update
+
 Third Party Components
 ===========
 

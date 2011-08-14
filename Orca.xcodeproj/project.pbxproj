@@ -304,6 +304,9 @@
 /* Begin PBXProject section */
 		93032F7013EF21E900C02357 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 93032F7313EF21E900C02357 /* Build configuration list for PBXProject "Orca" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
