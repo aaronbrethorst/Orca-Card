@@ -5,6 +5,8 @@ I want to be able to view the balance on my Seattle public transit Orca card on 
 
 So, I banged out this app in an afternoon. Of course, Orca's Terms of Use prohibit me from publishing this iPhone app to the App Store. So, I'm doing the next best thing: publishing all of the source code under a generally permissive license. Hopefully this will prove to be of some benefit to others.
 
+![Screenshot of App](https://github.com/aaronbrethorst/Orca-Card/raw/master/screenshot.jpg)
+
 Third Party Components
 ===========
 
